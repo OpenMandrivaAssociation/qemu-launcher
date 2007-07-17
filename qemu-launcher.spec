@@ -1,5 +1,5 @@
 %define	name	qemu-launcher
-%define	version	1.7.3
+%define	version	1.7.4
 %define	release	%mkrel 1
 
 Summary:	Interface to configure and launch Qemu	
@@ -85,7 +85,7 @@ rm -rf %buildroot
 %{_miconsdir}/%{name}.png
 %{_datadir}/pixmaps/*.xpm
 %{_datadir}/%name
-%{_mandir}/man1/qemu-launcher.1.bz2
+%{_mandir}/man1/qemu-launcher.1.lzma
 %{_datadir}/applications/qemu-launcher.desktop
 %{_iconsdir}/hicolor/*/apps/qemu-launcher.*
 
