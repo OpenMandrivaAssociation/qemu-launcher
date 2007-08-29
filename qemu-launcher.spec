@@ -72,6 +72,6 @@ rm -rf %buildroot
 %{_miconsdir}/%{name}.png
 %{_datadir}/pixmaps/*.xpm
 %{_datadir}/%name
-%{_mandir}/man1/qemu-launcher.1.lzma
+%{_mandir}/man1/*
 %{_datadir}/applications/qemu-launcher.desktop
 %{_iconsdir}/hicolor/*/apps/qemu-launcher.*
