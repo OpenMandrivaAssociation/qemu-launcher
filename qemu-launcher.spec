@@ -1,6 +1,6 @@
 %define	name	qemu-launcher
 %define	version	1.7.4
-%define	release	%mkrel 2
+%define	release	%mkrel 3
 
 Summary:	Interface to configure and launch Qemu	
 Name:		%name
@@ -8,7 +8,7 @@ Version:	%version
 Release:	%release
 License:	GPL
 Group:		Emulators
-URL:		http://emeitner.f2o.org/projects/qemu-launcher/	
+URL:		http://projects.wanderings.us/qemu_launcher
 Source0:	http://download.gna.org/qemulaunch/%{name}_%{version}.tar.bz2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
@@ -37,21 +37,10 @@ rm -rf %buildroot
 
 %find_lang %name
 
-mkdir -p %buildroot/%_menudir
-cat > %buildroot/%_menudir/%name << EOF
-
-?package(%name): \
-	command="%_bindir/%name" \
-	needs="X11" \
-	section="More Applications/Emulators" \
-	icon="%{name}.png" \
-	title="Qemu launcher" \
-	longtitle="Interface to configure and launch Qemu" \
-	xdg="true"
-EOF
-
 desktop-file-install --vendor="" \
  --remove-category="Application" \
+ --remove-category="Utility" \
+ --add-category="System" \
  --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
 
 mkdir -p %{buildroot}{%{_miconsdir},%{_iconsdir},%{_liconsdir},%{_menudir}}
@@ -78,7 +67,6 @@ rm -rf %buildroot
 %doc README
 
 %{_bindir}/*
-%{_menudir}/%name
 %{_liconsdir}/%{name}.png
 %{_iconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
@@ -87,5 +75,3 @@ rm -rf %buildroot
 %{_mandir}/man1/qemu-launcher.1.lzma
 %{_datadir}/applications/qemu-launcher.desktop
 %{_iconsdir}/hicolor/*/apps/qemu-launcher.*
-
-
