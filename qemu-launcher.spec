@@ -1,6 +1,6 @@
 %define	name	qemu-launcher
 %define	version	1.7.4
-%define	release	%mkrel 1
+%define	release	%mkrel 2
 
 Summary:	Interface to configure and launch Qemu	
 Name:		%name
@@ -52,7 +52,6 @@ EOF
 
 desktop-file-install --vendor="" \
  --remove-category="Application" \
- --add-category="X-MandrivaLinux-MoreApplications-Emulators;Emulator" \
  --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
 
 mkdir -p %{buildroot}{%{_miconsdir},%{_iconsdir},%{_liconsdir},%{_menudir}}
