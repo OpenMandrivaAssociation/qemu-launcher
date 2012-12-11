@@ -79,3 +79,76 @@ rm -rf %buildroot
 %{_mandir}/man1/*
 %{_datadir}/applications/qemu-launcher.desktop
 %{_iconsdir}/hicolor/*/apps/qemu-launcher.*
+
+
+%changelog
+* Tue Sep 15 2009 Thierry Vignaud <tvignaud@mandriva.com> 1.7.4-8mdv2010.0
++ Revision: 442556
+- rebuild
+
+* Fri Mar 06 2009 Antoine Ginies <aginies@mandriva.com> 1.7.4-7mdv2009.1
++ Revision: 350154
+- 2009.1 rebuild
+
+* Fri Aug 01 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.7.4-6mdv2009.0
++ Revision: 259913
+- rebuild
+
+* Fri Jul 25 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.7.4-5mdv2009.0
++ Revision: 247762
+- rebuild
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+* Wed Jan 02 2008 Olivier Blin <oblin@mandriva.com> 1.7.4-3mdv2008.1
++ Revision: 140742
+- restore BuildRoot
+
+  + Thierry Vignaud <tvignaud@mandriva.com>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Wed Aug 29 2007 Funda Wang <fundawang@mandriva.org> 1.7.4-3mdv2008.0
++ Revision: 73386
+- fix menu categories -> should be emulator only now
+
+* Wed Aug 29 2007 Pascal Terjan <pterjan@mandriva.org> 1.7.4-2mdv2008.0
++ Revision: 73361
+- Fix desktop file (#32940)
+
+* Wed Jul 18 2007 Jérôme Soyer <saispo@mandriva.org> 1.7.4-1mdv2008.0
++ Revision: 53136
+- New release 1.7.4
+
+
+* Mon Jan 01 2007 Pascal Terjan <pterjan@mandriva.org> 1.7.3-1mdv2007.0
++ Revision: 103016
+- 1.7.3
+
+* Sat Dec 02 2006 Pascal Terjan <pterjan@mandriva.org> 1.7.2-1mdv2007.1
++ Revision: 90045
+- Oops, xmmlint is actually in libxml2-utils
+- BuildRequires xmllint
+- 1.7.2
+- Import qemu-launcher
+
+* Wed Aug 16 2006 Pascal Terjan <pterjan@mandriva.org> 1.7.0-1mdv2007.0
+- New release 1.7.0
+- Add Source URL
+- XDG menu
+- Update icon cache
+
+* Thu Dec 22 2005 Pascal Terjan <pterjan@mandriva.org> 1.5-2mdk
+- BuildRequires ImageMagick
+
+* Mon Nov 14 2005 Pascal Terjan <pterjan@mandriva.org> 1.5-1mdk
+- 1.5
+- Drop P0
+- mkrel
+
+* Wed May 25 2005 Pascal Terjan <pterjan@mandriva.org> 1.3-2mdk
+- P0 (drop unsupported -keyboard)
+
+* Tue May 24 2005 Pascal Terjan <pterjan@mandriva.org> 1.3-1mdk
+- First Package
+
