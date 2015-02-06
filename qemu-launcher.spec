@@ -1,6 +1,6 @@
 %define	name	qemu-launcher
 %define	version	1.7.4
-%define	release	%mkrel 8
+%define release	9
 
 Summary:	Interface to configure and launch Qemu	
 Name:		%name
