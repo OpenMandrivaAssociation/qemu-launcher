@@ -8,7 +8,7 @@ Version:	%version
 Release:	%release
 License:	GPL
 Group:		Emulators
-URL:		http://projects.wanderings.us/qemu_launcher
+URL:		https://projects.wanderings.us/qemu_launcher
 Source0:	http://download.gna.org/qemulaunch/%{name}_%{version}.tar.bz2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
